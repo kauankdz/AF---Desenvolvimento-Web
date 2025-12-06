@@ -1,0 +1,181 @@
+.container {
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9fafb;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 1.3rem;
+    margin: 0;
+    color: #333;
+}
+
+
+.btn-novo,
+.btn-atualizar {
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border: none;
+    transition: 0.2s;
+}
+
+.btn-novo {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-novo:hover {
+    background: #1e40af;
+}
+
+.btn-atualizar {
+    background: transparent;
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.btn-atualizar:hover {
+    color: #1e40af;
+}
+
+
+.select-filtro {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    background: white;
+    font-size: 0.9rem;
+}
+
+
+.msg-erro,
+.msg-loading {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.msg-erro {
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.msg-loading {
+    color: #666;
+    font-style: italic;
+}
+
+/* LISTA */
+.lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item-vazio {
+    padding: 20px;
+    text-align: center;
+    color: #9ca3af;
+}
+
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.descricao {
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.separador {
+    color: #ccc;
+}
+
+.badge-categoria {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+
+.tipo {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.tipo.entrada {
+    color: #16a34a;
+}
+
+.tipo.saida {
+    color: #dc2626;
+}
+
+
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.valor {
+    font-size: 1rem;
+    color: #374151;
+    font-family: monospace;
+}
+
+
+.btn-excluir {
+    width: 26px;
+    height: 26px;
+    background: #fee2e2;
+    border: none;
+    border-radius: 6px;
+    color: #dc2626;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.btn-excluir:hover {
+    background: #ef4444;
+    color: #fff;
+}

@@ -1,0 +1,52 @@
+<div class="container">
+
+    <h1>Lista de Movimentações</h1>
+
+    <div class="header">
+        <select [(ngModel)]="filtroCategoria">
+            <option value="">Todas as Categorias</option>
+            @for (categoria of categorias; track categoria._id) {
+            <option [value]="categoria._id">{{ categoria.nome }}</option>
+            }
+        </select>
+
+        <a routerLink="/cadastro-movimentacoes" class="btn-novo">
+            + Nova Movimentação
+        </a>
+    </div>
+
+    <div class="card-saldo">
+        <span>Saldo Total:</span>
+        <strong>R$ {{ calcularSaldoTotal() }}</strong>
+    </div>
+
+    @if (carregando) {
+    <p>Carregando dados...</p>
+    } @else {
+
+    <ul class="lista">
+        @for (movimentacao of movimentacoesFiltradas; track movimentacao._id) {
+
+        <li class="item" [style.border-left]="'4px solid ' + getCorCategoria(movimentacao.categoriaId)">
+
+            <div class="info">
+                <span>{{ movimentacao.descricao }}</span>
+                <span>• {{ getNomeCategoria(movimentacao.categoriaId) }}</span>
+                <span>• {{ movimentacao.Tipo }}</span>
+            </div>
+
+            <div class="acoes">
+                <span>R$ {{ movimentacao.valor }}</span>
+                <button (click)="removerMovimentacao(movimentacao._id)">Excluir</button>
+            </div>
+
+        </li>
+
+        } @empty {
+        <li>Nenhuma movimentação encontrada.</li>
+        }
+
+    </ul>
+
+    }
+</div>
